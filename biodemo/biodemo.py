@@ -61,6 +61,11 @@ def parse_args():
         default=DEFAULT_MIN_LEN,
         help='Minimum length sequence to include in stats (default {})'.format(
             DEFAULT_MIN_LEN))
+    parser.add_argument(
+        '--maxlen',
+        metavar='N',
+        type=int,
+        help = 'Maximum length sequence to include in stats (default = None)')
     parser.add_argument('--version',
                         action='version',
                         version='%(prog)s ' + PROGRAM_VERSION)
@@ -114,7 +119,7 @@ class FastaStats(object):
                 self.num_seqs, self.num_bases, self.min_len, self.max_len,
                 self.average)
 
-    def from_file(self, fasta_file, minlen_threshold=DEFAULT_MIN_LEN):
+    def from_file(self, fasta_file, minlen_threshold=DEFAULT_MIN_LEN, maxlen_threshold=None):
         '''Compute a FastaStats object from an input FASTA file.
 
         Arguments:
