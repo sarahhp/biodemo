@@ -81,7 +81,7 @@ function parse_args {
     if [[ -z ${test_data_dir} ]]; then
         exit_with_error "missing command line argument: -d test_data_dir, use -h for help" 2
     fi
-    coverage run ${1/$test_program/$(which $test_program)}
+    eval "coverage run -a ${1/$test_program/$(which $test_program)}"
 }
 
 
@@ -114,7 +114,7 @@ function test_stdout_exit {
         echo "Actual exit status: $exit_status"
         echo "Expected exit status: $expected_exit_status"
     fi
-    coverage run ${1/$test_program/$(which $test_program)} 
+    eval "coverage run -a ${1/$test_program/$(which $test_program)}" 
 }
 
 # Run a command and check that the exit status is 
