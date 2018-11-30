@@ -1,5 +1,5 @@
 [![travis](https://travis-ci.org/sarahhp/biodemo.svg?branch=master)](https://travis-ci.org/sarahhp/biodemo)
-[![codecov](https://codecov.io/github/d-cameron/biodaniel/branch/master/graphs/badge.svg)](https://codecov.io/github/d-cameron/biodaniel)
+[![codecov](https://codecov.io/github/sarahhp/biodemo/branch/master/graphs/badge.svg)](https://codecov.io/github/sarahhp/biodemo)
 
 
 # Overview 
